@@ -1,0 +1,10 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset";
+
+.section-title {
+  color: $color-primary;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}

@@ -1,7 +1,11 @@
+import Form from "./components/Form";
+
 const App = () => {
   return (
-    <h1>React To Do App</h1>
-  )
-}
+    <div>
+      <Form />
+    </div>
+  );
+};
 
 export default App;
