@@ -1,0 +1,11 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset";
+
+form {
+  background-color: $background-gray;
+  box-shadow: $box-shadow;
+  height: 100vh;
+  padding: 60px;
+  width: 375px;
+}

@@ -2,11 +2,16 @@
 
 $font-primary: "Inter", sans-serif;
 
-// Font colors
+// Fonts colors
 
 $color-primary: #221d23;
 $color-secondary: #8e8b99;
 $color-light: #fafafa;
+
+// Backgrounds colors
+
+$background-light: #fafafa;
+$background-gray: #f7f6f9;
 
 // Colors pallete
 
@@ -19,6 +24,8 @@ $color-blue-hover: #67a2ff;
 $color-red-hover: #fc7d40;
 $color-yellow-hover: #ffcd43;
 
-// Border radius
+// Others
 
 $border-radius: 10px;
+
+$box-shadow: 6px 6px 6px -6px rgba(34, 29, 35, 0.25);
