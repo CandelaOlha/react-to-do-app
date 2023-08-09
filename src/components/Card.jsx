@@ -12,10 +12,14 @@ const Card = ({ task }) => {
       <TaskStatus status={status} />
       <div className="card">
         <div className="card-title-container">
-          <h2 className="card-title">{title}</h2>
+          <h2 className={`card-title ${status && "completed-task"}`}>
+            {title}
+          </h2>
           {priority && <TaskPriority />}
         </div>
-        <p className="card-description">{description}</p>
+        <p className={`card-description ${status && "completed-task"}`}>
+          {description}
+        </p>
         <CardButton text="Edit" type="edit" />
         <CardButton text="Delete" type="delete" />
       </div>

@@ -1,8 +1,9 @@
 import "./App.scss";
 import Form from "./components/Form";
 import CardsContainer from "./components/CardsContainer";
+import { useState } from "react";
 
-const tasks = [
+const examples = [
   {
     id: 1,
     title: "Task 1",
@@ -30,9 +31,15 @@ const tasks = [
 ];
 
 const App = () => {
+  const [tasks, setTasks] = useState(examples);
+
+  const addTask = (task) => {
+    setTasks([...tasks, task]);
+  };
+
   return (
     <div className="content-container">
-      <Form />
+      <Form addTask={addTask} />
       <CardsContainer tasks={tasks} />
     </div>
   );

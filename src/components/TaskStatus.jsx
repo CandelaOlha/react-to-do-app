@@ -4,8 +4,8 @@ import { FaCheck } from "react-icons/fa";
 
 const TaskStatus = ({ status }) => {
   return (
-    <div className={`task-status-container ${status}`}>
-      <FaCheck className={`task-status-icon ${status}`} />
+    <div className={`task-status-container ${status ? "completed" : "pending"}`}>
+      <FaCheck className={`task-status-icon ${status ? "completed" : "pending"}`} />
     </div>
   );
 };
