@@ -4,5 +4,6 @@
 
 .cards-container {
     background-color: $background-gray;
+    overflow: scroll;
     padding: 60px;
 }

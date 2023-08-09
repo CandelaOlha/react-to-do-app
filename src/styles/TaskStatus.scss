@@ -4,14 +4,25 @@
 
 .task-status-container {
   align-items: center;
-  background-color: $color-green;
-  border: 1px solid $color-green;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   margin-right: 20px;
   padding: 10px;
-  .task-status-icon {
+  .task-status-icon.true {
     color: $color-light;
   }
+  .task-status-icon.false {
+    color: transparent;
+  }
+}
+
+.task-status-container.true {
+  background-color: $color-green;
+  border: 1px solid $color-green;
+}
+
+.task-status-container.false {
+  background-color: transparent;
+  border: 1px solid $border-color;
 }
