@@ -1,0 +1,30 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset";
+
+.card-container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  .card {
+    background-color: $background-light;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    max-width: 690px;
+    padding: 40px;
+    .card-title-container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      .card-title {
+        color: $color-primary;
+        font-size: $font-size-card-title;
+        margin-bottom: 20px;
+      }
+    }
+    .card-description {
+      color: $color-primary;
+      margin-bottom: 30px;
+    }
+  }
+}

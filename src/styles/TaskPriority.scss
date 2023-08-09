@@ -1,0 +1,18 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset";
+
+.card-status-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  .card-status-icon {
+    color: $color-blue;
+    margin-right: 5px;
+  }
+  .card-status-text {
+    color: $color-blue;
+    font-size: $font-size-small-text;
+    font-weight: 600;
+  }
+}

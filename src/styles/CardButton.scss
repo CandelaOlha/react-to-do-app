@@ -1,0 +1,27 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset";
+
+.card-button {
+  border: none;
+  border-radius: $border-radius;
+  color: $color-light;
+  cursor: pointer;
+  font-size: $font-size-small-text;
+  margin-right: 10px;
+  padding: 8px 32px;
+}
+
+.edit-button {
+  background-color: $color-yellow;
+  &:hover {
+    background-color: $color-yellow-hover;
+  }
+}
+
+.delete-button {
+  background-color: $color-red;
+  &:hover {
+    background-color: $color-red-hover;
+  }
+}

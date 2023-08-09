@@ -1,0 +1,17 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset";
+
+.task-status-container {
+  align-items: center;
+  background-color: $color-green;
+  border: 1px solid $color-green;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 10px;
+  .task-status-icon {
+    color: $color-light;
+  }
+}
