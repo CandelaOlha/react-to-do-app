@@ -1,7 +1,7 @@
 import "../styles/Form.scss";
-import SectionTitle from "./SectionTitle";
-import { useState } from "react";
 import PropTypes from "prop-types";
+import { useState } from "react";
+import SectionTitle from "./SectionTitle";
 
 const Form = ({ addTask }) => {
   const [task, setTask] = useState({

@@ -4,12 +4,15 @@ import TaskStatus from "./TaskStatus";
 import TaskPriority from "./TaskPriority";
 import CardButton from "./CardButton";
 
-const Card = ({ task, deleteTask }) => {
+const Card = ({ task, deleteTask, modifyTaskStatus }) => {
   const { id, title, description, priority, status } = task;
 
   return (
     <div className="card-container">
-      <TaskStatus status={status} />
+      <TaskStatus
+        status={status}
+        modifyTaskStatus={() => modifyTaskStatus(id)}
+      />
       <div className="card">
         <div className="card-title-container">
           <h2 className={`card-title ${status && "completed-task"}`}>
@@ -34,6 +37,7 @@ const Card = ({ task, deleteTask }) => {
 Card.propTypes = {
   task: PropTypes.object.isRequired,
   deleteTask: PropTypes.func.isRequired,
+  modifyTaskStatus: PropTypes.func.isRequired,
 };
 
 export default Card;

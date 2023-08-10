@@ -3,12 +3,17 @@ import PropTypes from "prop-types";
 import SectionTitle from "./SectionTitle";
 import Card from "./Card";
 
-const CardsContainer = ({ tasks, deleteTask }) => {
+const CardsContainer = ({ tasks, deleteTask, modifyTaskStatus }) => {
   return (
     <section className="cards-container">
       <SectionTitle title="My tasks" />
       {tasks.map((task) => (
-        <Card key={task.id} task={task} deleteTask={deleteTask} />
+        <Card
+          key={task.id}
+          task={task}
+          deleteTask={deleteTask}
+          modifyTaskStatus={modifyTaskStatus}
+        />
       ))}
     </section>
   );
@@ -17,6 +22,7 @@ const CardsContainer = ({ tasks, deleteTask }) => {
 CardsContainer.propTypes = {
   tasks: PropTypes.array.isRequired,
   deleteTask: PropTypes.func.isRequired,
+  modifyTaskStatus: PropTypes.func.isRequired,
 };
 
 export default CardsContainer;

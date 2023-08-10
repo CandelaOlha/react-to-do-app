@@ -42,10 +42,25 @@ const App = () => {
     setTasks(newArray);
   };
 
+  const modifyTaskStatus = (id) => {
+    const newArray = tasks.map((task) => {
+      if (task.id === id) {
+        task.status = !task.status;
+      }
+      return task;
+    });
+
+    setTasks(newArray);
+  };
+
   return (
     <div className="content-container">
       <Form addTask={addTask} />
-      <CardsContainer tasks={tasks} deleteTask={deleteTask} />
+      <CardsContainer
+        tasks={tasks}
+        deleteTask={deleteTask}
+        modifyTaskStatus={modifyTaskStatus}
+      />
     </div>
   );
 };
