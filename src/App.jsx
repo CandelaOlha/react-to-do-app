@@ -37,10 +37,15 @@ const App = () => {
     setTasks([...tasks, task]);
   };
 
+  const deleteTask = (id) => {
+    const newArray = tasks.filter((task) => task.id !== id);
+    setTasks(newArray);
+  };
+
   return (
     <div className="content-container">
       <Form addTask={addTask} />
-      <CardsContainer tasks={tasks} />
+      <CardsContainer tasks={tasks} deleteTask={deleteTask} />
     </div>
   );
 };

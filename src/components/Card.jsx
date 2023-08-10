@@ -4,8 +4,8 @@ import TaskStatus from "./TaskStatus";
 import TaskPriority from "./TaskPriority";
 import CardButton from "./CardButton";
 
-const Card = ({ task }) => {
-  const { title, description, priority, status } = task;
+const Card = ({ task, deleteTask }) => {
+  const { id, title, description, priority, status } = task;
 
   return (
     <div className="card-container">
@@ -21,7 +21,11 @@ const Card = ({ task }) => {
           {description}
         </p>
         <CardButton text="Edit" type="edit" />
-        <CardButton text="Delete" type="delete" />
+        <CardButton
+          text="Delete"
+          type="delete"
+          triggerAction={() => deleteTask(id)}
+        />
       </div>
     </div>
   );
@@ -29,6 +33,7 @@ const Card = ({ task }) => {
 
 Card.propTypes = {
   task: PropTypes.object.isRequired,
+  deleteTask: PropTypes.func.isRequired,
 };
 
 export default Card;
