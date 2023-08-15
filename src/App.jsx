@@ -1,37 +1,16 @@
 import "./App.scss";
 import Form from "./components/Form";
 import CardsContainer from "./components/CardsContainer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const examples = [
-  {
-    id: 1,
-    title: "Task 1",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    priority: true,
-    status: true,
-  },
-  {
-    id: 2,
-    title: "Task 2",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    priority: false,
-    status: false,
-  },
-  {
-    id: 3,
-    title: "Task 3",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    priority: true,
-    status: false,
-  },
-];
+const initialStateTasks = JSON.parse(localStorage.getItem("tasks")) || []; // Si hay tareas en local storage, las renderizo. Si no, lo inicio como un array vacío.
 
 const App = () => {
-  const [tasks, setTasks] = useState(examples);
+  const [tasks, setTasks] = useState(initialStateTasks);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTask = (task) => {
     setTasks([...tasks, task]);
