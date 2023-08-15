@@ -1,0 +1,16 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./reset";
+
+.empty-state-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .empty-state-image {
+    height: 440px;
+    margin: 20px;
+    padding: 40px;
+    width: 500px;
+  }
+}

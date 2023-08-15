@@ -2,6 +2,7 @@ import "../styles/CardsContainer.scss";
 import PropTypes from "prop-types";
 import SectionTitle from "./SectionTitle";
 import Card from "./Card";
+import EmptyState from "./EmptyState";
 
 const CardsContainer = ({ tasks, deleteTask, modifyTaskStatus }) => {
   return (
@@ -15,6 +16,7 @@ const CardsContainer = ({ tasks, deleteTask, modifyTaskStatus }) => {
           modifyTaskStatus={modifyTaskStatus}
         />
       ))}
+      {tasks.length === 0 && <EmptyState />}
     </section>
   );
 };

@@ -3,7 +3,9 @@
 @import "./reset";
 
 .cards-container {
-    background-color: $background-gray;
-    overflow: scroll;
-    padding: 60px;
+  background-color: $background-gray;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding: 60px;
 }
